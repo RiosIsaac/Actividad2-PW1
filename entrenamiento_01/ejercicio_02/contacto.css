@@ -1,0 +1,157 @@
+/* RESET */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+ 
+/* VARIABLES */
+:root {
+    --fondo: #2D3142;
+    --superficie: #4F5D75;
+    --primario: #EF8354;
+    --texto: #FFFFFF;
+    --texto-secundario: #BFC0C0;
+    --borde: rgba(255, 255, 255, 0.1);
+}
+ 
+/* BODY */
+body {
+    min-height: 100vh;
+    font-family: 'DM Sans', sans-serif;
+    background: var(--fondo);
+    color: var(--texto);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+ 
+/* HEADER — fijo */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3.5rem;
+    background: var(--fondo);
+    border-bottom: 1px solid var(--borde);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    z-index: 100;
+}
+ 
+.header a {
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--texto-secundario);
+    text-decoration: none;
+    font-weight: 500;
+}
+ 
+.header a:hover,
+.header a.activo {
+    color: var(--primario);
+}
+ 
+.header .separador {
+    color: var(--borde);
+}
+ 
+/* CONTENIDO */
+.contenido {
+    margin-top: 3.5rem;
+    margin-bottom: 3rem;
+    width: 80%;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+ 
+/* FORMULARIO */
+.formulario {
+    background: var(--fondo);
+    border: 1px solid var(--borde);
+    border-radius: 0.8rem;
+    padding: 2rem;
+}
+ 
+/* CAMPO */
+.campo {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+ 
+.campo label {
+    width: 5.5rem;
+    font-size: 0.85rem;
+    color: var(--texto-secundario);
+    padding-top: 0.45rem;
+    flex-shrink: 0;
+}
+ 
+.campo input,
+.campo textarea {
+    flex: 1;
+    background: var(--superficie);
+    border: 1px solid var(--borde);
+    border-radius: 0.4rem;
+    padding: 0.45rem 0.75rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.88rem;
+    color: var(--texto);
+    outline: none;
+}
+
+.campo textarea {
+    resize: vertical;
+    height: 6rem;
+}
+ 
+/* BOTONES */
+.botones {
+    display: flex;
+    gap: 1rem;
+    padding-left: 6.5rem;
+    margin-top: 0.5rem;
+}
+ 
+.boton {
+    padding: 0.5rem 1.8rem;
+    border-radius: 0.4rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    border: 1px solid var var(--primario);
+    background: var(--superficie);
+    color: var(--texto);
+}
+
+/* FOOTER — fijo */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3rem;
+    background: var(--fondo);
+    border-top: 1px solid var(--borde);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ 
+.footer p {
+    font-size: 0.78rem;
+    color: var(--texto-secundario);
+    letter-spacing: 0.05em;
+}

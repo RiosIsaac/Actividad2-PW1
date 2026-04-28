@@ -1,0 +1,86 @@
+:root {
+    --fondo: #2D3142;
+    --superficie: #4F5D75;
+    --primario: #EF8354;
+    --texto: #FFFFFF;
+    --texto-secundario: #BFC0C0;
+    --borde: rgba(255, 255, 255, 0.1);
+}
+.header-cv {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--borde);
+    border-radius: 0.8rem;
+}
+
+.info h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: var(--primario);
+    margin-bottom: 0.8rem;
+}
+
+.info p {
+    font-size: 0.9rem;
+    color: var(--texto-secundario);
+    margin-bottom: 0.3rem;
+    font-weight: 300;
+}
+
+.info p span {
+    font-weight: 500;
+    color: var(--texto);
+}
+
+.foto img {
+    width: 8rem;
+    height: 9rem;
+    object-fit: cover;
+    border-radius: 0.6rem;
+    border: 2px solid var(--primario);
+    display: block;
+}
+
+/* Secciones del CV */
+.section {
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--borde);
+    border-radius: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.section h2 {
+    font-size: 1rem;
+    color: var(--primario);
+    text-transform: uppercase;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--borde);
+}
+
+.section ul {
+    padding-left: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.section ul li {
+    font-size: 0.9rem;
+    color: var(--texto);
+}
+
+.section ul li a {
+    color: var(--texto-secundario);
+    text-decoration: none;
+}
+
+.section ul li a:hover {
+    color: var(--primario);
+}
